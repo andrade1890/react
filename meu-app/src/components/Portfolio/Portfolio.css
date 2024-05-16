@@ -1,0 +1,20 @@
+main{
+    text-align: center;
+    display: flex;
+    
+    
+}
+
+.item-portfolio{
+   display: inline;
+    margin: 100px;
+   border: 1px solid #8697a6 ;
+}
+
+body main img{
+    height: 250px;
+    
+}
+.item-portfolio a {
+    text-decoration: none;
+}
