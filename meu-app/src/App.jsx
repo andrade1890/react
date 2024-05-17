@@ -1,47 +1,42 @@
-import React, { Fragment, useState } from "react"
+import React from "react"
 
 import "./App.css";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-import Curriculo from "./components/Header/Curriculo/Curriculo";
+import Curriculo from "./components/Curriculo/Curriculo";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Contato from "./components/Contato/Contato";
 
+import {BrowserRouter,Route,Link,Routes} from "react-router-dom"
 
 function App() {
   return (
     <>
    <Header></Header> 
 
-   <nav>
-    <ul>
-      <li className="button"><a href="#">curriculo</a></li>
-      <li className="button"><a href="pages/portfolio.html">portfolio</a></li>
-      <li className="button"><a href="pages/contato.html">contato</a></li>
-    </ul>
-   </nav>
-    
     <BrowserRouter>
+
+ <nav>
+    <ul>
+      <li className="button"><Link to="/">Curriculo</Link></li>
+      <li className="button"><Link to="/Portfolio">Portfolio</Link></li>
+      <li className="button"><Link to="/Contato">Contato</Link></li> 
+    </ul>
+  </nav>
+
     <Routes>
-      <Route path="/" element={<layout/>}>
-        <Route index element={<Home/>}/>
-        <Route path="blogs" element={<Blogs/>}/>
-        <Route path="contact" element={<contact/>}/>
-        <Route path="*" element={<NoPage/>}/>
-        </Route>
-     </Routes>
+        <Route index element={<Curriculo/>}/>
+        <Route path="Portfolio" element={<Portfolio />} />
+        <Route path="Contato" element={<Contato />} />
+    </Routes>
+  
     </BrowserRouter>
 
+ <Footer></Footer>
 
-   <Curriculo></Curriculo>
-
-   <Portfolio></Portfolio>
-
-  <Footer></Footer>
-
-   </>
-
+  </>
   )
 }
 
