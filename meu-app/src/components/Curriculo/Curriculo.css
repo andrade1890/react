@@ -45,6 +45,7 @@ nav ul li{
 }    
 
 section{
+    display: inline;
     margin: 50px;
     padding: 50px;
     color: black;
