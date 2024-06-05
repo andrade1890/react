@@ -1,0 +1,26 @@
+nav{
+    background-color: #535f69;
+    text-align: center;
+  }
+  
+  nav ul{
+    text-decoration: none;
+    margin: 0;
+    padding: 25px;
+  }
+  
+  nav ul li{
+    
+     display: inline;
+     padding: 50px;
+     text-align: center;
+     color: black;
+     font-weight: bold;
+      text-transform: uppercase;
+  
+  } 
+  @media only screen and (max-width: 600px){
+    nav ul li{
+        padding: 15px;
+    }
+  }

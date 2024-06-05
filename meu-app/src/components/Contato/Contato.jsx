@@ -10,17 +10,17 @@ function Contato() {
 
             <fieldset>
                 <label htmlFor="input-nome">nome</label>
-                <input type="text" name="input-nome" id="input-nome" />
+                <input type="text" name="input-nome" id="input-nome" required minLength="2"/>
             </fieldset>
 
             <fieldset>
               <label htmlFor="input-email">E-mail</label>
-              <input type="email" name="input-email" id="input-email" />
+              <input type="email" name="input-email" id="input-email" required/>
             </fieldset>
 
             <fieldset>
                 <label htmlFor="input-tel">telefone</label >
-                <input type="tel" name="input-tel" id="input-tel" />
+                <input type="tel" name="input-tel" id="input-tel" placeholder="(81) 99999-9999"required pattern="" />
             </fieldset>
 
             <fieldset>

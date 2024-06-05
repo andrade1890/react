@@ -1,41 +1,25 @@
 import React from "react";
 
+
+import Portfoliojson from './Portfolio.json'
+import ItemPortfolio from "./itemPortfolio/itemPortfolio";
 import "./Portfolio.css";
-import claudevan from "../../assets/claudevan.png";
 
-function Portfolio() {
-
-  
-  const portfolios= [
-    {
-      link: "https://academy.comeialabs.com.br/",
-      image: "../../assets/claudevan.png",
-      title: "portifolio 1"
-    },
-    {
-      link: "https://academy.comeialabs.com.br/",
-      image: "../../assets/claudevan.png",
-      title: "portifolio 2"
-    },
-    {
-      link: "https://academy.comeialabs.com.br/",
-      image: "../../assets/claudevan.png",
-      title: "portifolio 3",
-    }
-   ];
+function Portfolio(){
 
     return (
         <main>
 
-         {portfolios.map(
-             (portfolio)=> 
-               <div className="item-portfolio">
-             <a href="https://academy.comeialabs.com.br/" target="_blank">
-             <img src={claudevan} alt="capa comeia academy" />
-              <p>{portfolio.title}</p>
-             </a>
-           </div>
-        )}
+         {Portfoliojson.map(
+             (item,index)=> 
+
+           <ItemPortfolio
+           key={index}
+              link={item.link}
+              image={item.image}
+              title={item.title}
+           ></ItemPortfolio>
+         )}
             
       </main>
     )

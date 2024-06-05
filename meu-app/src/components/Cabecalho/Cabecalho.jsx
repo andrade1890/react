@@ -1,7 +1,9 @@
 import React from "react";
-import claudevanavatar from "../../assets/claudevan.png"
+import claudevanavatar from "../../assets/claudevan.png";
 
-function Header() {
+import "./Cabecalho.css";
+
+function Cabecalho() {
     return (  
       <header>
         <img src={claudevanavatar} alt="foto de rosto de claudevan" />
@@ -11,4 +13,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default Cabecalho;
